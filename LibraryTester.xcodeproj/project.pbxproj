@@ -13,6 +13,8 @@
 		3911F94229B33CFD00C00650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3911F94029B33CFD00C00650 /* Main.storyboard */; };
 		3911F94429B33CFD00C00650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3911F94329B33CFD00C00650 /* Assets.xcassets */; };
 		3911F94729B33CFD00C00650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3911F94529B33CFD00C00650 /* LaunchScreen.storyboard */; };
+		3911F95029B33D7C00C00650 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3911F94F29B33D7C00C00650 /* SnapKit */; };
+		3911F95329B33D8E00C00650 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3911F95229B33D8E00C00650 /* SwiftEntryKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3911F95329B33D8E00C00650 /* SwiftEntryKit in Frameworks */,
+				3911F95029B33D7C00C00650 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = LibraryTester;
+			packageProductDependencies = (
+				3911F94F29B33D7C00C00650 /* SnapKit */,
+				3911F95229B33D8E00C00650 /* SwiftEntryKit */,
+			);
 			productName = LibraryTester;
 			productReference = 3911F93729B33CFD00C00650 /* LibraryTester.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,10 @@
 				Base,
 			);
 			mainGroup = 3911F92E29B33CFD00C00650;
+			packageReferences = (
+				3911F94E29B33D7C00C00650 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3911F95129B33D8E00C00650 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+			);
 			productRefGroup = 3911F93829B33CFD00C00650 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +370,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3911F94E29B33D7C00C00650 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		3911F95129B33D8E00C00650 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3911F94F29B33D7C00C00650 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3911F94E29B33D7C00C00650 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3911F95229B33D8E00C00650 /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3911F95129B33D8E00C00650 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3911F92F29B33CFD00C00650 /* Project object */;
 }
